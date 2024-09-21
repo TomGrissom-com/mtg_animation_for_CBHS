@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MTG ANIMATION</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            #mainContainer{
+                position: fixed;
+                top:0;
+                bottom: 0;
+                right:0;
+                left: 0;
+                padding: 0;
+                margin: 0;
+                background-color: rgba(0,0,0,0);
+                animation: backGroundFade 8s ease-in-out forwards;
+                z-index: 99;
+                pointer-events: none;
+            }
+            #headline{
+                opacity: 0;
+                color: white;
+                position: fixed;
+                text-align: center;
+                top: 10%;
+                right: 50%;
+                transform: translate(50%,0);
+                animation: fadeInOut 8s ease-in-out forwards;
+            }
+            .chadderBoxTCGCardImage{
+                width: 100px;
+                height: 145px;
+            }
+            #linkContainer01{
+                position: fixed;
+                z-index: 103;
+                bottom:0;
+                right:0;
+                pointer-events:all;
+            }
+            #linkContainer02{
+                position: fixed;
+                z-index: 101;
+                bottom:0;
+                right:0;
+                pointer-events:all;
+            }
+            #linkContainer03{
+                position: fixed;
+                z-index: 100;
+                bottom:0;
+                right:0;
+                pointer-events:all;
+            }
+            .chadderBoxTCGCardImage:hover {
+                transform: scale(1.2); /* Makes the image grow slightly larger */
+                transition: transform 0.3s ease-in-out; /* Smooth transition for the hover effect */
+            }
+/*First Set Of Animations*/
+            @keyframes animationCardOne {
+                0%{
+                    bottom:0;
+                    right: 0;
+                    transform: translate(50%,50%) rotate(0deg) scale(.25);
+                }
+                25%{
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(50%,50%) rotate(360deg) scale(2);
+                }
+                75%{
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(50%,50%) rotate(360deg) scale(2);
+                }
+                100%{
+                    bottom:0;
+                    right: 0;
+                    transform: translate(0,0) rotate(0deg) scale(1);
+                }
+            }
+            @keyframes animationCardTwo {
+                0%{
+                    bottom:0;
+                    right: 100%;
+                    transform: translate(50%,50%) rotate(0deg) scale(.25);
+                }
+                25%{
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(50%,50%) rotate(360deg) scale(2);
+                }
+                35%{
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(-75%,75%) rotate(325deg) scale(2);
+                }
+                65%{
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(-75%,75%) rotate(325deg) scale(2);
+                }
+                75%{
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(50%,50%) rotate(360deg) scale(2);
+                }
+                100%{
+                    bottom:0;
+                    right: 0;
+                    transform: translate(0,0) rotate(0deg) scale(1);
+                }
+            }
+            @keyframes animationCardThree {
+                0%{
+                    bottom:100%;
+                    right: 100%;
+                    transform: translate(50%,50%) rotate(0deg) scale(.25);
+                }
+                25%{
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(50%,50%) rotate(360deg) scale(2);
+                }
+                35%{
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(175%,75%) rotate(395deg) scale(2);
+                }
+                65%{
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(175%,75%) rotate(395deg) scale(2);
+                }
+                75%{
+                    bottom: 50%;
+                    right: 50%;
+                    transform: translate(50%,50%) rotate(360deg) scale(2);
+                }
+                100%{
+                    bottom:0;
+                    right: 0;
+                    transform: translate(0,0) rotate(0deg) scale(1);
+                }
+            }
+            @keyframes backGroundFade{
+                0%{
+                    background-color: rgba(0,0,0,.5);
+                }
+                35%{
+                    background-color: rgba(0,0,0,.5);
+                }
+                65%{
+                    background-color: rgba(0,0,0,.5);
+                }
+                100%{
+                    background-color: rgba(0,0,0,0);
+                }
+            }
+            @keyframes fadeInOut {
+                0%{
+                    opacity: 0;
+                }
+                35%{
+                    opacity: 1;
+                }
+                65%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+/*Second Set Of Animations*/
+            @keyframes cardSwitch {
+                0%{
+                    bottom:0;
+                    right: 0;
+                    transform: rotate(0deg)
+                }
+                50%{
+                    bottom: 150px;
+                    right: 75px;
+                    transform: rotate(-45deg)
+                }
+                100%{
+                    bottom:0;
+                    right: 0;
+                    transform: rotate(0deg)
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, officia eligendi inventore perspiciatis dolores mollitia nisi! Ad nemo dolorum ducimus voluptas fugiat optio nobis porro cum, esse est. Earum, porro!</p>
+        <div id="mainContainer">
+            <div id="middleContainer">
+
+                <div id="headLineContainer">
+                    <h1 id="headline">Shop Singles Online<br/> CLICK HERE!</h1>
+                </div>
+
+                <div id='cardsContainer'>
+
+                    <div class="linkContainer" id="linkContainer01">
+                        <a href="https://chadderboxhobby.tcgplayerpro.com/" target="blank" id="chadderboxhobbyTCGLink01">
+                            <img src="images/Magic_card_back.png" alt="Animated Image" class="chadderBoxTCGCardImage"/>
+                        </a>
+                    </div>
+                    <div class="linkContainer" id="linkContainer02">
+                        <a href="https://chadderboxhobby.tcgplayerpro.com/" target="blank" id="chadderboxhobbyTCGLink02">
+                            <img src="images/pkmonCard.png" alt="Animated Image" class="chadderBoxTCGCardImage"/>
+                        </a>
+                    </div>
+                    <div class="linkContainer" id="linkContainer03">
+                        <a href="https://chadderboxhobby.tcgplayerpro.com/" target="blank" id="chadderboxhobbyTCGLink03">
+                            <img src="images/Yugioh_Card_Back.png" alt="Animated Image" class="chadderBoxTCGCardImage"/>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script>
+            const linkContainer01 = document.getElementById('linkContainer01')
+            const linkContainer02 = document.getElementById('linkContainer02')
+            const linkContainer03 = document.getElementById('linkContainer03')
+            function initialAnimation(){
+                linkContainer01.style.animation = "animationCardOne 8s ease-in-out forwards"
+                linkContainer02.style.animation = "animationCardTwo 8s ease-in-out forwards"
+                linkContainer03.style.animation = "animationCardThree 8s ease-in-out forwards"
+                setTimeout(()=>{
+                    secondaryAnimation()
+                },9000)
+
+            }
+
+            function resetAnimation(element) {
+                element.style.animation = 'none';
+                element.offsetHeight;
+                element.style.animation = '';
+            }
+
+            function secondaryAnimation(){
+                resetAnimation(linkContainer03)
+                linkContainer03.style.animation = "cardSwitch 2s ease-in-out forwards"
+                setTimeout(()=>{
+                    linkContainer03.style.zIndex = 104;
+                },1000)
+                setTimeout(()=>{
+                    thirdAnimation()
+                },3000)
+            }
+            function thirdAnimation(){
+                resetAnimation(linkContainer02)
+                linkContainer02.style.animation = "cardSwitch 2s ease-in-out forwards"
+                setTimeout(()=>{
+                    linkContainer02.style.zIndex = 105;
+                },1000)
+                setTimeout(()=>{
+                    fourthAnimation()
+                },3000)
+            }
+            function fourthAnimation(){
+                resetAnimation(linkContainer01)
+                linkContainer01.style.animation = "cardSwitch 2s ease-in-out forwards"
+                setTimeout(()=>{
+                    linkContainer01.style.zIndex = 106;
+                },1000)
+                setTimeout(()=>{
+                    linkContainer01.style.zIndex = 103
+                    linkContainer02.style.zIndex = 102
+                    linkContainer03.style.zIndex = 101
+                    secondaryAnimation()
+                },5000)
+            }
+            window.onload = initialAnimation()
+        </script>
+    </body>
+</html>
+
